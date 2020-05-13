@@ -1,0 +1,188 @@
+{
+    "status": 200,
+    "result": [{
+            "name": "热门",
+            "id": "remen"
+        },
+        {
+            "name": "头条",
+            "id": "toutiao"
+        },
+        {
+            "name": "社会",
+            "id": "shehui"
+        },
+        {
+            "name": "历史",
+            "id": "lishi"
+        },
+        {
+            "name": "电台",
+            "id": "diantai"
+        },
+        {
+            "name": "军事",
+            "id": "junshi"
+        },
+        {
+            "name": "航空",
+            "id": "hankong"
+        },
+        {
+            "name": "要闻",
+            "id": "yaowen"
+        },
+        {
+            "name": "娱乐",
+            "id": "yule"
+        },
+        {
+            "name": "影视歌",
+            "id": "yingshige"
+        },
+        {
+            "name": "财经",
+            "id": "caijing"
+        },
+        {
+            "name": "股票",
+            "id": "gupiao"
+        },
+        {
+            "name": "彩票",
+            "id": "caipiao"
+        },
+        {
+            "name": "体育",
+            "id": "tiyu"
+        },
+        {
+            "name": "BA",
+            "id": "ba"
+        },
+        {
+            "name": "中国足球",
+            "id": "cnzuqiu"
+        },
+        {
+            "name": "国际足球",
+            "id": "zuqiu"
+        },
+        {
+            "name": "跑步",
+            "id": "paobu"
+        },
+        {
+            "name": "冰雪运动",
+            "id": "bingxue"
+        },
+        {
+            "name": "科技",
+            "id": "keji"
+        },
+        {
+            "name": "手机",
+            "id": "shouji"
+        },
+        {
+            "name": "数码",
+            "id": "shuma"
+        },
+        {
+            "name": "智能",
+            "id": "zhineng"
+        },
+        {
+            "name": "轻松一刻",
+            "id": "qingsong"
+        },
+        {
+            "name": "云课堂",
+            "id": "yunketang"
+        },
+        {
+            "name": "独家",
+            "id": "dujia"
+        },
+        {
+            "name": "态度公开课",
+            "id": "taidu"
+        },
+        {
+            "name": "汽车",
+            "id": "qiche"
+        },
+        {
+            "name": "房产",
+            "id": "fangchan"
+        },
+        {
+            "name": "家居",
+            "id": "jiajun"
+        },
+        {
+            "name": "游戏",
+            "id": "youxi"
+        },
+        {
+            "name": "旅游",
+            "id": "lvyou"
+        },
+        {
+            "name": "健康",
+            "id": "jiankang"
+        },
+        {
+            "name": "读书",
+            "id": "dushu"
+        },
+        {
+            "name": "酒香",
+            "id": "jiuxiang"
+        },
+        {
+            "name": "教育",
+            "id": "jiaoyu"
+        },
+        {
+            "name": "亲子",
+            "id": "qinzi"
+        },
+        {
+            "name": "暴雪游戏",
+            "id": "baoxue"
+        },
+        {
+            "name": "漫画",
+            "id": "manhua"
+        },
+        {
+            "name": "二次元",
+            "id": "erciyuan"
+        },
+        {
+            "name": "态度营销",
+            "id": "taidu"
+        },
+        {
+            "name": "时尚",
+            "id": "shishang"
+        },
+        {
+            "name": "女人",
+            "id": "nvren"
+        },
+        {
+            "name": "政务",
+            "id": "zhengwu"
+        },
+        {
+            "name": "艺术",
+            "id": "yishu"
+        },
+        {
+            "name": "阳光法院",
+            "id": "fayuan"
+        }
+    ]
+}
