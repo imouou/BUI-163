@@ -1,22 +1,51 @@
-<!-- 这里还是一个标准的BUI页面 -->
+<!-- 这里还是一个标准的BUI页面 bui-box-vertical 用来解决微信IOS的前进后退历史记录问题 -->
 <div class="bui-page bui-box-vertical">
-    <header>
-        <div class="bui-bar">
-            <div class="bui-bar-left">
-                <!-- 左边有图标示例 -->
-                <div class="bui-btn btn-back"><i class="icon-back"></i></div>
-            </div>
-            <div class="bui-bar-main">BUI单页开发工程模板</div>
-            <div class="bui-bar-right">
-                <!-- 右边有图标示例 -->
-                <div class="bui-btn"><i class="icon-search"></i></div>
+    <main>
+        <div id="tabDynamic" class="bui-tab bui-box-vertical">
+            <div class="bui-tab-main">
+                <ul>
+                    <li>
+                        <!-- 首页 -->
+                        <component id="tab0" name="pages/home/index"></component>
+                    </li>
+                    <li>
+                        <!-- 视频 -->
+                        <component id="tab1" name="pages/videos/index" delay="true"></component>
+                    </li>
+                    <li>
+                        <!-- 热榜 -->
+                        <component id="tab2" name="pages/top/index" delay="true"></component>
+                    </li>
+                    <li>
+                        <!-- 圈子 -->
+                        <component id="tab3" name="pages/top/index" delay="true"></component>
+                    </li>
+                    <li>
+                        <!-- 我的 -->
+                        <component id="tab4" name="pages/personal/index" delay="true"></component>
+                    </li>
+                </ul>
+
             </div>
         </div>
-    </header>
-    <main>
-        <!-- 中间内容 -->
     </main>
     <footer>
-        <!-- 底部内容 -->
+        <ul id="tabDynamicNav" class="bui-nav">
+            <li class="bui-btn bui-box-vertical active" "><i class="icon-home "></i>
+                <div class="span1 ">首页</div>
+            </li>
+            <li class="bui-btn bui-box-vertical "><i class="icon-menu "></i>
+                <div class="span1 ">视频</div>
+            </li>
+            <li class="bui-btn bui-box-vertical "><i class="icon-pic "><span class="bui-badges "></span></i>
+                <div class="span1 ">热榜</div>
+            </li>
+            <li class="bui-btn bui-box-vertical "><i class="icon-user "></i>
+                <div class="span1 ">圈子</div>
+            </li>
+            <li class="bui-btn bui-box-vertical "><i class="icon-user "></i>
+                <div class="span1 ">我</div>
+            </li>
+        </ul>
     </footer>
 </div>
