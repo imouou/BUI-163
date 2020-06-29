@@ -1,0 +1,41 @@
+﻿<style>
+    .panel-tag {
+        margin: 0;
+    }
+    
+    .panel-tag .bui-panel-head {
+        border: 0;
+        color: #b6b7b8;
+    }
+    
+    .panel-tag .bui-panel-main {
+        padding-bottom: .2rem;
+    }
+    
+    .tag-list .span1 {
+        margin-bottom: .2rem;
+        margin-left: .2rem;
+    }
+    
+    .tag-list .bui-btn {
+        white-space: nowrap;
+        padding: .18rem .3rem;
+        background: #f4f8f9;
+        border: 0;
+    }
+</style>
+<div class="bui-panel panel-tag">
+    <div class="bui-panel-head bui-box-align-middle">
+        <div class="span1" b-text="searchhistory.title"></div>
+        <div class="bui-btn-text" b-click="searchhistory.clear">
+            <i class="icon-">&#xe639;</i><span></span>
+        </div>
+    </div>
+    <div class="bui-panel-main">
+        <div class="bui-box-fluid tag-list" b-template="searchhistory.tplList(result)">
+            <!-- <div class="span1">
+                <div class="bui-btn ring">长征五B首飞成功</div>
+            </div> -->
+        </div>
+    </div>
+</div>

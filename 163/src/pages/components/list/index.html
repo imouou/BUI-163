@@ -1,0 +1,137 @@
+﻿<style>
+    .list-photo .bui-thumbnail {
+        -webkit-border-radius: 0;
+        border-radius: 0;
+    }
+    
+    .list-photo .span1~.bui-thumbnail {
+        margin-right: 0;
+    }
+    
+    .list-photo .bui-box-space {
+        margin-top: .2rem;
+    }
+    
+    .list-photo .bui-box-space .span1 img {
+        width: 100%;
+    }
+    
+    .list-photo .bui-box-space .span1:only-child {
+        margin-left: -.2rem;
+        margin-right: -.2rem;
+    }
+    
+    .list-photo .bui-thumbnail {
+        position: relative;
+    }
+    
+    .list-photo .photo-title {
+        font-size: .34rem;
+    }
+    
+    .list-photo .photo-item img {
+        width: 100%;
+    }
+    
+    .list-photo .icons-play {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -.305rem;
+        margin-top: -.305rem;
+        width: .61rem;
+        height: .61rem;
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAA9CAMAAAApvJHbAAAAolBMVEX///8AAABISEj///////////////////////////////////////////////////////////////////////9gYGDJycn19fX///////////////////////////9NTU1OTk5aWlp0dHR+fn6Xl5ehoaG7u7ve3t76+vr///////////9XV1dqamrn5+f///////////////+Hh4fm5ub///8a68MkAAAANnRSTlPZAPcDFNHMIsOArXx2xpiJW0jAa2bz4tq4tFVUPjwe9/b07+7p6OPe2tN0cfXy3cmhjEvs3QRIYAkhAAABpklEQVRIx6XX13KDMBBA0bUlQDRTTBJc04tbXJL8/69lQ5qNtYtA99lntGNmVKCnzxv7u3ILANty54894lc6Lab7GE6L99MPIy0jpJriSDZqGTpA5YSS1aKoLO0LQet5AE0Fc0pnLjTnZno9BLOGGi18MM0XZxqxOa/rAto0PNUHaNfhWHtOS+14/1oE0LZA/OkU2pf+aul20K780SF0KfzW0umkHVnpFXRr+aWFAm2bi0texwL1DPT1+/37d5bPUCeUxm4eXxidoFa0xrjxVQ88YDWO/wpEaMesZsdHG7GaHR/tgNXs+GhHrGbHR5uzmh0frWumsTXUQ2usN1BvYbz29cOVZu3cTN89w3m52X9++wS6RvT3ZoeuQhtRmh26Cu2E1dXQVGg9TldDk6Ht5YzGoZkUu7fg0GwJs6+t366Ab0bsqUYpYbOfr+zOEqtzzO4MtTq/7e8O9vcWLGupM5v7WmFzVwx7Nd3mq/vWd2T7+7n92+A4kbr8wqng30T+grQLXza/x5ZKa9VSGr4FE1WnyRRnJnU9bxINytgBJy4H0YR6h34ChbgXF3AgbnEAAAAASUVORK5CYII=) no-repeat;
+        background-size: cover;
+    }
+    
+    .list-photo .video-item {
+        position: relative;
+        padding: 0;
+        border-bottom: 0;
+    }
+    
+    .list-photo .video-item .item-title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: .2rem;
+        color: #fff;
+        text-shadow: 0 0px 1px #999;
+    }
+    
+    .list-photo .video-item .photo-title img {
+        width: 100%;
+        background: #efefef;
+    }
+    
+    .list-photo .video-item .bui-nav-icon li {
+        margin-left: .1rem;
+    }
+    
+    .list-photo .video-item .bui-nav-icon li i {
+        margin-right: .1rem;
+    }
+    
+    .list-photo .video-item .bui-box-align-middle {
+        padding: .3rem .2rem;
+    }
+    /* 实时热榜 */
+    
+    .bui-scroll .bui-scroll-main {
+        background: #ecf1f4;
+    }
+    
+    .list-photo .hot-item {
+        margin-bottom: .1rem;
+        border: 0;
+    }
+    
+    .list-photo .hot-item .item-title {
+        font-size: .34rem;
+        line-height: 1.7;
+        color: #000;
+    }
+    
+    .list-photo .hot-item .hot-tag {
+        background: #f6f7f9;
+        border-radius: .2rem 0 .2rem 0;
+        color: #f74d24;
+        display: inline-block;
+        min-width: 2rem;
+        margin-bottom: .2rem;
+    }
+    
+    .list-photo .hot-item .hot-tag-num,
+    .list-photo .hot-item .hot-tag-text {
+        display: inline-block;
+    }
+    
+    .list-photo .hot-item .hot-tag-text {
+        padding-right: .2rem;
+        font-size: .22rem;
+    }
+    
+    .list-photo .hot-item .hot-tag-num {
+        background: #f74d24;
+        border-radius: .2rem 0 .2rem 0;
+        color: #fff;
+        padding: .05rem .1rem;
+        margin-right: .1rem;
+        width: .7rem;
+        text-align: center;
+    }
+    
+    .list-photo .hot-item .bui-tag {
+        background-color: #feede8;
+        color: #f85025;
+    }
+</style>
+<div class="bui-scroll">
+    <div class="bui-scroll-head"></div>
+    <div class="bui-scroll-main">
+        <ul class="bui-list list-photo">
+        </ul>
+    </div>
+    <div class="bui-scroll-foot"></div>
+</div>

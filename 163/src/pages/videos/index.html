@@ -1,18 +1,24 @@
-﻿<div class="bui-page bui-box-vertical">
+﻿<style>
+    .page-video .bui-bar {
+        background-color: #fff;
+    }
+    
+    .page-video header .bui-bar .bui-bar-main {
+        color: #333;
+    }
+</style>
+<div class="bui-page page-video bui-box-vertical">
     <header>
         <div class="bui-bar">
             <div class="bui-bar-left">
-                <a class="bui-btn btn-back"><i class="icon-back"></i></a>
             </div>
-            <div class="bui-bar-main">模板</div>
+            <div class="bui-bar-main">视频</div>
             <div class="bui-bar-right">
             </div>
         </div>
     </header>
     <main>
         <!-- 中间滚动内容 -->
+        <component id="videolist" name="pages/components/list/index" class="fullheight" result="T1348647909107" type="video"></component>
     </main>
-    <footer>
-        <!-- 底部固定内容 -->
-    </footer>
 </div>

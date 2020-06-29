@@ -1,0 +1,35 @@
+{
+    "data": [{
+            "id": "T1348647909107",
+            "name": "推荐"
+        },
+        {
+            "id": "Funny",
+            "name": "搞笑"
+        },
+        {
+            "id": "Scene",
+            "name": "新闻现场"
+        },
+        {
+            "id": "Adorable",
+            "name": "萌物"
+        },
+        {
+            "id": "Curious",
+            "name": "猎奇"
+        },
+        {
+            "id": "Technology",
+            "name": "黑科技"
+        },
+        {
+            "id": "Movies",
+            "name": "影视"
+        },
+        {
+            "id": "Music",
+            "name": "音乐"
+        }
+    ]
+}

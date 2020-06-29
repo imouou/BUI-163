@@ -15,7 +15,8 @@ loader.define(function(require, exports, module) {
             var tab = bui.tab({
                 id: "#tabDynamic",
                 menu: "#tabDynamicNav",
-                // animate: false, // 跳转无动画
+                animate: false, // 跳转无动画
+                scroll: false,
                 swipe: false, // 不滑动
             })
 

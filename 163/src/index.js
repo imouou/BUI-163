@@ -61,6 +61,10 @@ bui.ready(function() {
         hash: true,
     })
 
+    // alert(window.screen.width)
+    // alert(window.screen.height)s
+    // alert(window.devicePixelRatio)
+
     // 绑定事件
     bind();
 

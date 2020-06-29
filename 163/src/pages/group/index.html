@@ -1,0 +1,47 @@
+<style>
+    .page-group .bui-nav .bui-btn {
+        color: #999;
+    }
+    
+    .page-group .bui-nav .bui-btn.active {
+        font-size: .36rem;
+        color: #333;
+    }
+    
+    .page-group .bui-nav .bui-btn.active:after {
+        background-color: #fff;
+    }
+    
+    .page-group .bui-tab {
+        background: #fff;
+    }
+    
+    .page-group .bui-tab-head .bui-nav {
+        background: #fff;
+        border-bottom: 0;
+        width: 2.4rem;
+    }
+</style>
+<div class="bui-page page-group bui-box-vertical">
+    <main>
+        <div id="uiTabGroup" class="bui-tab bui-box-vertical">
+            <div class="bui-tab-head">
+                <ul class="bui-nav">
+                    <!-- 分屏菜单 active 是激活的TAB样式 -->
+                    <li class="bui-btn active">推荐</li>
+                    <li class="bui-btn">广场</li>
+                </ul>
+            </div>
+            <div class="bui-tab-main">
+                <ul>
+                    <li>
+                        <component id="grouptab0" name="pages/components/group-recommend/index">
+                    </li>
+                    <li style="display:none;">
+                        <component id="grouptab1" name="pages/components/group/index" delay="true">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</div>

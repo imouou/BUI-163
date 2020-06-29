@@ -1,18 +1,65 @@
-﻿<div class="bui-page bui-box-vertical">
+﻿<style>
+    .page-top .bui-bar {
+        background: #fff;
+    }
+    
+    .page-top header.bui-bar .bui-bar-main,
+    .page-top header .bui-bar .bui-bar-main {
+        color: #333;
+    }
+    
+    .page-top .bui-nav .bui-btn {
+        color: #999;
+    }
+    
+    .page-top .bui-nav .bui-btn.active {
+        font-size: .36rem;
+        color: #333;
+    }
+    
+    .page-top .bui-nav .bui-btn.active:after {
+        background-color: #ee2c25;
+    }
+    
+    .page-top .bui-nav {
+        background: #fff;
+        border-bottom: 0;
+    }
+</style>
+<div class="bui-page page-top bui-box-vertical">
     <header>
         <div class="bui-bar">
             <div class="bui-bar-left">
                 <a class="bui-btn btn-back"><i class="icon-back"></i></a>
             </div>
-            <div class="bui-bar-main">模板</div>
+            <div class="bui-bar-main">热榜</div>
             <div class="bui-bar-right">
             </div>
         </div>
     </header>
     <main>
-        <!-- 中间滚动内容 -->
+        <div id="uiTabHot" class="bui-tab bui-box-vertical">
+            <div class="bui-tab-head">
+                <ul class="bui-nav bui-nav-skin01">
+                    <!-- 分屏菜单 active 是激活的TAB样式 -->
+                    <li class="bui-btn active">热榜</li>
+                    <li class="bui-btn">跟帖热议</li>
+                    <li class="bui-btn">独家推荐</li>
+                </ul>
+            </div>
+            <div class="bui-tab-main">
+                <ul>
+                    <li>
+                        <component id="hottab0" name="pages/components/list/index" type="hot" result="T1467284926140" delay="true"></component>
+                    </li>
+                    <li style="display:none;">
+                        <component id="hottab1" name="pages/components/list/index" type="hot" result="T1348647909107" delay="true"></component>
+                    </li>
+                    <li style="display:none;">
+                        <component id="hottab2" name="pages/components/list/index" type="hot" result="T1370583240249" delay="true"></component>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </main>
-    <footer>
-        <!-- 底部固定内容 -->
-    </footer>
 </div>

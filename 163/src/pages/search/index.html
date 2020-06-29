@@ -1,0 +1,69 @@
+<style>
+    .page-search .bui-bar {
+        background: #fff;
+    }
+    
+    .page-search header.bui-bar .bui-bar-main,
+    .page-search header .bui-bar .bui-bar-main {
+        color: #333;
+    }
+    
+    .page-search .bui-bar .bui-searchbar .bui-input {
+        border: 1px solid #f1f1f1;
+    }
+    
+    .page-search header.bui-bar .bui-bar-left>[class*=bui-btn]>i,
+    .page-search header.bui-bar .bui-bar-right>[class*=bui-btn]>i,
+    .page-search header .bui-bar .bui-bar-left>[class*=bui-btn]>i,
+    .page-search header .bui-bar .bui-bar-right>[class*=bui-btn]>i {
+        color: #333;
+    }
+    
+    .page-search header.bui-bar .bui-bar-left>[class*=bui-btn],
+    .page-search header.bui-bar .bui-bar-right>[class*=bui-btn],
+    .page-search header .bui-bar .bui-bar-left>[class*=bui-btn],
+    .page-search header .bui-bar .bui-bar-right>[class*=bui-btn] {
+        color: #333;
+    }
+    
+    .page-search header .bui-bar {
+        background: #fff;
+    }
+    
+    .page-search .search-remove {
+        border: 0;
+    }
+    
+    .page-search main {
+        background: #fff;
+    }
+    
+    .page-search .bui-panel {
+        margin-bottom: .2rem;
+        border-bottom: 1px solid #f9fafa;
+    }
+</style>
+<div class="bui-page page-search bui-box-vertical">
+    <header>
+        <div class="bui-bar">
+            <div class="bui-bar-left bui-bar-side">
+                <div class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></div>
+            </div>
+            <div class="bui-bar-main">
+                <!-- 搜索条控件结构 -->
+                <component id="searchbar" name="pages/components/searchbar/index"></component>
+            </div>
+            <div class="bui-bar-right">
+                <div id="btnSearch" class="bui-btn-text">搜索</div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <component id="searchhistory" name="pages/components/searchhistory/index" title="搜索历史"></component>
+        <component id="categoryhot" name="pages/components/categoryhot/index" title="热门栏目"></component>
+        <component id="searchhot" name="pages/components/searchhot/index" title="热搜"></component>
+
+        <!-- 动态编译传参 -->
+        <component id="searchlist"></component>
+    </main>
+</div>

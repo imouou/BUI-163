@@ -14,6 +14,16 @@ loader.define(function(require, exports, module) {
     var pageview = {
         init: function() {
             // 这里初始化
+            // 选项卡 js 初始化:
+            var uiTab = bui.tab({
+                id: "#uiTabHot"
+            });
+            uiTab.on("to", function() {
+                var index = this.index();
+                loader.delay({
+                    id: "#hottab" + index
+                })
+            }).to(0)
         }
     };
 

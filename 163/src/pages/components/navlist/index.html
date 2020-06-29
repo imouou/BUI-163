@@ -1,0 +1,58 @@
+﻿<style>
+    .panel-tag {
+        border: 0;
+    }
+    
+    .panel-tag .bui-panel-head,
+    .panel-tag .bui-panel-main {
+        border: 0;
+    }
+    
+    .tag-list .span1 {
+        margin-bottom: .2rem;
+    }
+    
+    .tag-list .bui-tag {
+        border-radius: 1rem;
+        background: none;
+        border: 1px solid #ddd;
+        width: 100%;
+        padding-top: .12rem;
+        padding-bottom: .12rem;
+        position: relative;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #333;
+        text-overflow: ellipsis;
+    }
+    
+    .tag-list .bui-tag .icon-removefill {
+        position: absolute;
+        top: .17rem;
+        right: .05rem;
+        z-index: 10;
+        color: #ccc;
+    }
+</style>
+<div class="page-navlist">
+    <div class="bui-panel panel-tag">
+        <div class="bui-panel-head">我的栏目</div>
+        <div class="bui-panel-main container-y">
+            <div class="bui-fluid-space-3 tag-list" b-template="navlist.tplMine(navlist.selected)">
+                <!-- <div class="span1">
+                    <div class="bui-tag">标签1 <i class="icon-removefill"></i></div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="bui-panel panel-tag">
+        <div class="bui-panel-head">更多栏目</div>
+        <div class="bui-panel-main container-y">
+            <div class="bui-fluid-space-3 tag-list" b-template="navlist.tplMore(navlist.unselect)">
+                <!-- <div class="span1">
+                    <div class="bui-tag">标签1</div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>

@@ -11,18 +11,11 @@
     <header>
         <div class="bui-bar bui-bar-side">
             <div class="bui-bar-left">
-                <a class="bui-btn"><img src="images/logo.png" alt=""></a>
+                <!-- <a class="bui-btn"><img src="images/logo.png" alt=""></a> -->
+                <a class="bui-btn title" style="font-size: .5rem;" href="http://easybui.com/demo/" iframe="true">BUI</a>
             </div>
             <div class="bui-bar-main">
-                <!-- 搜索条控件结构 -->
-                <div id="searchbar" class="bui-searchbar bui-box">
-                    <div class="span1">
-                        <div class="bui-input">
-                            <i class="icon-search"></i>
-                            <input type="search" readonly="true" value="" placeholder="请输入关键字" />
-                        </div>
-                    </div>
-                </div>
+                <component name="pages/components/searchbar/index" readonly="true"></component>
             </div>
             <div class="bui-bar-right">
                 <!-- 右边按钮 -->
@@ -31,49 +24,6 @@
         </div>
     </header>
     <main>
-        <!-- bui-nav 里有多少个li, bui-tab-main里, 就会有多少个li一一对应 -->
-        <div id="uiTab" class="bui-tab bui-box-vertical">
-            <div class="bui-tab-head">
-                <ul class="bui-nav">
-                    <!-- 分屏菜单 active 是激活的TAB样式 -->
-                    <li class="bui-btn active">关注</li>
-                    <li class="bui-btn">头条</li>
-                    <li class="bui-btn">抗疫</li>
-                    <li class="bui-btn">视频</li>
-                    <li class="bui-btn">娱乐</li>
-                    <li class="bui-btn">体育</li>
-                </ul>
-            </div>
-            <div class="bui-tab-main">
-                <ul>
-                    <li>
-                        <!-- 列表控件 html 对应的结构:  -->
-                        <div id="uiList" class="bui-scroll">
-                            <div class="bui-scroll-head"></div>
-                            <div class="bui-scroll-main">
-                                <ul class="bui-list">
-                                </ul>
-                            </div>
-                            <div class="bui-scroll-foot"></div>
-                        </div>
-                    </li>
-                    <li style="display:none;">
-                        头条
-                    </li>
-                    <li style="display:none;">
-                        抗疫
-                    </li>
-                    <li style="display:none;">
-                        视频
-                    </li>
-                    <li style="display:none;">
-                        娱乐
-                    </li>
-                    <li style="display:none;">
-                        体育
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <component id="hometab" name="pages/components/tab/index" class="fullheight"></component>
     </main>
 </div>
