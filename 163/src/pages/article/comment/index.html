@@ -1,0 +1,35 @@
+﻿<style>
+    .page-comment .bui-bar {
+        background: #fff;
+    }
+    
+    .page-comment .bui-bar .bui-bar-right>[class*=bui-btn]>i,
+    .page-comment .bui-bar .bui-bar-left>[class*=bui-btn]>i {
+        color: #333;
+    }
+    
+    .page-comment .bui-bar .bui-bar-main {
+        color: #333;
+    }
+    
+    .page-comment main header {
+        display: none;
+    }
+</style>
+<div class="bui-page page-comment bui-box-vertical">
+    <header>
+        <div class="bui-bar">
+            <div class="bui-bar-left">
+                <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+            </div>
+            <div class="bui-bar-main">评论</div>
+            <div class="bui-bar-right">
+            </div>
+        </div>
+    </header>
+    <main>
+        <component class="delaycom" name="pages/components/comment/index" delay="true"></component>
+
+        <component class="delaycom" name="pages/components/commentlist/index" delay="true"></component>
+    </main>
+</div>

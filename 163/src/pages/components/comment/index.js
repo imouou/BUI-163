@@ -3,7 +3,7 @@
  * 默认模块名: pages/comment/comment
  * @return {[object]}  [ 返回一个对象 ]
  */
-loader.define(function(uiList, require, exports, module) {
+loader.define(function(require, exports, module) {
 
     var pageview = {
         init: function() {
@@ -18,6 +18,16 @@ loader.define(function(uiList, require, exports, module) {
 
             // 上传初始化
             this.upload();
+
+            this.bind();
+        },
+        bind: function() {
+            router.$("#btnCommentPost").click(function() {
+                // module.id 为模块内部的id
+                var dialog = bui.history.getPageDialog(module.id);
+
+                dialog.close();
+            })
         },
         upload: function() {
             // 拍照上传

@@ -1,22 +1,42 @@
 <style>
     .page-article .bui-bar {
         background: #fff;
+        -webkit-box-align: center;
+        box-align: center;
+    }
+    
+    .page-article .bui-bar .bui-bar-right>[class*=bui-btn],
+    .page-article .bui-bar .bui-bar-left>[class*=bui-btn] {
+        color: #333;
     }
     
     .page-article .bui-bar .bui-bar-right>[class*=bui-btn]>i,
     .page-article .bui-bar .bui-bar-left>[class*=bui-btn]>i {
-        color: #666;
+        color: #333;
+    }
+    
+    .page-article .bui-bar .bui-bar-right>.comment-num {
+        border: 1px solid #f9342a;
+        width: 100%;
+        text-align: center;
+        height: .5rem;
+        line-height: .5rem;
+        color: #f9342a;
+    }
+    
+    .page-article .bui-bar .bui-bar-right {
+        height: auto;
     }
 </style>
 <div class="bui-page page-article bui-box-vertical">
     <header>
-        <div class="bui-bar">
+        <div class="bui-bar bui-bar-side">
             <div class="bui-bar-left">
                 <div class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></div>
             </div>
             <div class="bui-bar-main"></div>
             <div class="bui-bar-right">
-                <div class="bui-btn btn-share"><i class="icon-share"></i></div>
+                <div id="commentNum" class="bui-btn ring comment-num"></div>
             </div>
         </div>
     </header>

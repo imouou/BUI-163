@@ -12,8 +12,33 @@
 loader.define(function(require, exports, module) {
     // 定义
     var pageview = {
+        loginStatus: false,
         init: function() {
+
+            this.checkLogin();
+
             // 这里初始化
+            this.bind();
+        },
+        bind: function() {
+
+        },
+        checkLogin: function() {
+            var userinfo = appstorage.get("userinfo", 0);
+
+            // 有登录时
+            if (userinfo) {
+                loader.load({
+                    id: "#userinfo",
+                    url: "pages/components/userinfo/index.html",
+                    param: userinfo
+                })
+            } else {
+                loader.load({
+                    id: "#userinfo",
+                    url: "pages/components/loginpart/index.html"
+                })
+            }
         }
     };
 

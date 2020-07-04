@@ -33,11 +33,6 @@
         font-size: .28rem;
     }
     
-    .nav-icon-login .bui-btn .icon- {
-        width: 1.2rem;
-        height: 1.2rem;
-    }
-    
     .nav-list {
         border-top: none;
         margin-top: 0.2rem;
@@ -91,6 +86,22 @@
     .icon-red {
         color: #fd8886;
     }
+    
+    .personal-img {
+        width: 1.2rem;
+        height: 1.2rem;
+        overflow: hidden;
+        border-radius: 1.2rem;
+        margin-right: .2rem;
+    }
+    
+    .personal-name {
+        font-size: .4rem;
+    }
+    
+    .personal-header {
+        margin: .5rem 0 .2rem .5rem;
+    }
 </style>
 
 <div class="bui-page page-setting bui-box-vertical">
@@ -106,64 +117,8 @@
         </div>
     </header>
     <main class="container-xy">
-        <ul class="bui-nav-icon nav-icon-login bui-fluid-4">
-            <li class="bui-btn">
-                <i class="icon-">
-                    <img src="images/icons/icon-nav-l1.png" alt="">
-                </i>
-            </li>
-            <li class="bui-btn">
-                <i class="icon-">
-                    <img src="images/icons/icon-nav-l2.png" alt="">
-                </i>
-            </li>
-            <li class="bui-btn">
-                <i class="icon-">
-                    <img src="images/icons/icon-nav-l3.png" alt="">
-                </i>
-            </li>
-            <li class="bui-btn">
-                <i class="icon-">
-                    <img src="images/icons/icon-nav-l4.png" alt="">
-                </i>
-            </li>
-        </ul>
-        <div class="container-xy">
-            <div class="bui-btn danger ring" style="width:3rem;">登录/注册</div>
-        </div>
-        <!-- <div class="personal-header">
-            <div class="personal-img">
-                <img src="images/logo2.png">
-            </div>
-            <p class="name">王小o</p>
-            <p class="grade">积分：2988</p>
-        </div> -->
-        <ul class="bui-nav-icon bui-fluid-4">
-            <li class="bui-btn bui-box-vertical">
-                <i class="icon-">
-                    <img src="images/icons/icon-nav-n1.png" alt="">
-                </i>
-                <div class="span1">动态</div>
-            </li>
-            <li class="bui-btn bui-box-vertical">
-                <i class="icon-">
-                    <img src="images/icons/icon-nav-n2.png" alt="">
-                </i>
-                <div class="span1">跟帖</div>
-            </li>
-            <li class="bui-btn bui-box-vertical">
-                <i class="icon-">
-                    <img src="images/icons/icon-nav-n3.png" alt="">
-                </i>
-                <div class="span1">收藏</div>
-            </li>
-            <li class="bui-btn bui-box-vertical">
-                <i class="icon-">
-                    <img src="images/icons/icon-nav-n4.png" alt="">
-                </i>
-                <div class="span1">历史</div>
-            </li>
-        </ul>
+        <component id="userinfo"></component>
+
         <ul class="bui-nav-icon nav-icon round bui-fluid-4">
             <li class="bui-btn bui-box-vertical">
                 <i class="icon-">

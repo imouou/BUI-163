@@ -52,7 +52,10 @@
 
 // 开启单页路由
 window.router = bui.router();
-
+// 为了确保演示, 这里使用sessionStorage, 关闭浏览器后就能重新进行登录流程处理.
+window.appstorage = bui.storage({
+    local: false
+});
 bui.ready(function() {
     // 初始化路由
     router.init({
@@ -61,16 +64,12 @@ bui.ready(function() {
         hash: true,
     })
 
-    // alert(window.screen.width)
-    // alert(window.screen.height)s
-    // alert(window.devicePixelRatio)
-
     // 绑定事件
     bind();
 
     function bind() {
         // 绑定页面的所有按钮有href跳转
-        bui.btn({ id: "#bui-router", handle: ".bui-btn,a" }).load();
+        bui.btn({ id: "#bui-router", handle: ".bui-btn,a,.bui-btn-text" }).load();
 
         // 统一绑定页面所有的后退按钮
         $("#bui-router").on("click", ".btn-back", function(e) {

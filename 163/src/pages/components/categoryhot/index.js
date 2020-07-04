@@ -25,22 +25,25 @@ loader.define(function(require, exports, module) {
                 data: {
                     title: "",
                     result: [{
-                        id: "c1",
-                        name: "谈心社"
-                    }, {
-                        id: "c2",
-                        name: "跟帖热议榜"
-                    }, {
-                        id: "c3",
-                        name: "轻松一刻"
-                    }]
+                            "id": "T1348647909107",
+                            "name": "头条"
+                        },
+                        {
+                            "id": "T1348649079062",
+                            "name": "体育"
+                        },
+                        {
+                            "id": "T1348649145984",
+                            "name": "NBA"
+                        }
+                    ]
                 },
                 templates: {
                     tplList: function(data) {
                         var html = "";
                         data.forEach(function(item, index) {
                             html += `<div class="span1">
-                                    <div class="bui-btn ring" href="${item.id}">${item.name}</div>
+                                    <div class="bui-btn ring" href="pages/article/index.html?result=${item.id}&name=${item.name}">${item.name}</div>
                                 </div>`
                         })
 

@@ -1,0 +1,24 @@
+﻿<style>
+    .nav-icon-login .bui-btn .icon- {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+</style>
+<div class="personal-header bui-box-align-middle">
+    <div class="personal-img">
+        <img b-src="userinfo.info.image">
+    </div>
+    <div class="span1">
+        <div class="bui-box">
+            <p class="personal-name" b-text="userinfo.info.name">
+                </span>
+            </p>
+            <div class="span1">
+                <!--自适应内容-->
+            </div>
+            <span class="bui-btn-text mini" b-click="userinfo.toggle">切换帐号</span>|
+            <span class="bui-btn-text mini" b-click="userinfo.logout">注销</span>
+        </div>
+        <p class="personal-grade">积分：<span b-text="userinfo.info.grade"></span></p>
+    </div>
+</div>

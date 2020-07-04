@@ -3,17 +3,7 @@ loader.define(function(require, exports, module) {
     var params = bui.history.getParams("url");
     var pageview = {
         init: function() {
-            // 绑定分享
-            var uiActionsheet = bui.actionsheet({
-                trigger: ".btn-share",
-                buttons: [{ name: "分享到微博", value: "weibo" }, { name: "朋友圈", value: "pyq" }],
-                callback: function(e) {
-                    var val = $(e.target).attr("value");
-                    if (val == "cancel") {
-                        this.hide();
-                    }
-                }
-            })
+
             console.log(params)
 
             // 渲染正文
@@ -26,6 +16,10 @@ loader.define(function(require, exports, module) {
                 param: params
             })
 
+            this.bind(params);
+        },
+        bind: function(opt) {
+            router.$("#commentNum").text((opt.replyCount || 0) + "人参与跟帖");
         },
         getRelative: function(params) {
 
