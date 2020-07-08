@@ -41,17 +41,44 @@ loader.define(function(require, exports, module) {
         },
         template: function(data) {
             var html = "";
-            switch (params.type) {
-                case "article":
-                    html = pageview.templateList(data);
-                    break;
-                case "video":
-                    html = pageview.templateVideo(data);
-                    break;
-                default:
-                    html = pageview.templateList(data);
-                    break;
-            }
+            data.forEach(function(el, index) {
+                if (el.specialextra && el.specialextra.length) {
+                    // 专题模板
+                    html += pageview.templateTopic(el, index);
+                } else if (el.picinfo) {
+                    // 多图模板
+                    html += pageview.templateMorePhoto(el, index);
+                } else if (el.skipType) {
+                    // 大图在下面
+                    html += pageview.templateSkipType(el, index);
+                } else {
+                    // 缩略图在右边
+                    html += pageview.templateThunmbail(el, index);
+                }
+
+            });
+
+            return html;
+        },
+        templateTopic: function(el) {
+            html = `<li class="bui-btn bui-box-vertical" href="pages/article/article.html?id=${el.postid}" param='${JSON.stringify(el)}'>
+                        <h3 class="photo-title">${el.TAG || el.title}</h3>
+                        <div class="span1">
+                            <div class="bui-fluid-space-3 container-y container-full">`
+            el.specialextra && el.specialextra.forEach(function(item, i) {
+                if (i < 3) {
+                    // 显示3个专题图片
+                    html += `<div class="span1">
+                                <div class="photo-item">
+                                    <img src="${item.imgsrc}?imageView&thumbnail=234y146&quality=45&interlace=1&enlarge=1&type=webp" />
+                                </div>
+                            </div>`
+                }
+
+            })
+            html += `       </div>
+                        </div>
+                    </li>`;
             return html;
         },
         templateMorePhoto: function(el) {
@@ -83,31 +110,26 @@ loader.define(function(require, exports, module) {
         templateSkipType: function(el) {
             var html = "";
             html += `<li class="bui-btn bui-box-vertical" href="pages/article/article.html?id=${el.postid}" param='${JSON.stringify(el)}'>
-                        <h3 class="photo-title">${el.title}</h3>
-                        <div class="span1">
-                            <div class="bui-box-space">`;
+                            <h3 class="photo-title">${el.title}</h3>
+                            <div class="span1">
+                                <div class="bui-box-space">`;
             html += `       <div class="span1">
-                                    <div class="photo-item">
-                                        <img src="${el.imgsrc}" alt="${el.ltitle||el.title}">
-                                    </div>
-                                </div>`
+                                        <div class="photo-item">
+                                            <img src="${el.imgsrc}" alt="${el.ltitle||el.title}">
+                                        </div>
+                                    </div>`
             html += `</div></div></li>`;
             return html;
         },
-        templateList: function(data) {
-
+        templateThunmbail: function(el) {
             var html = "";
-            data.forEach(function(el, index) {
-
-                html += `<li class="bui-btn bui-box">
-                    <div class="span1">
-                        <h3 class="item-title bui-box-text-hide">${el.title}</h3>
-                        <p class="item-text bui-box-text-hide">${el.digest}</p>
-                    </div>
-                    <div class="bui-thumbnail"><img src="${el.imgsrc}" alt=""></div>
-                </li>`
-            });
-
+            html += `<li class="bui-btn bui-box-align-top" href="pages/article/article.html?id=${el.postid}" param='${JSON.stringify(el)}'>
+                        <div class="span1">
+                            <h3 class="item-title">${el.title}</h3>
+                            <p class="item-text">${bui.date.fromnow(el.ptime)} ${el.source} ${el.replyCount}跟帖</p>
+                        </div>
+                        <div class="bui-thumbnail"><img src="${el.imgsrc}?imageView&thumbnail=234y146&quality=45&interlace=1&enlarge=1&type=webp" alt=""></div>
+                    </li>`;
             return html;
         }
     };
