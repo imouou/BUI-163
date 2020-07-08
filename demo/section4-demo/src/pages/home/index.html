@@ -1,0 +1,75 @@
+﻿<style>
+    .bui-page .bui-bar {
+        background: #e2262a;
+    }
+    
+    .bui-bar-side img {
+        height: .6rem;
+    }
+</style>
+<div class="bui-page bui-box-vertical">
+    <header>
+        <div class="bui-bar bui-bar-side">
+            <div class="bui-bar-left">
+                <a class="bui-btn"><img src="images/logo.png" alt=""></a>
+            </div>
+            <div class="bui-bar-main">
+                <!-- 输入ui-searchbar 回车生成 -->
+                <!-- 搜索条控件结构 -->
+                <div id="searchbar" class="bui-searchbar bui-box">
+                    <div class="span1">
+                        <div class="bui-input">
+                            <i class="icon-search"></i>
+                            <input type="search" readonly="true" value="" placeholder="请输入关键字" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bui-bar-right">
+                <!-- 右边按钮 -->
+                <a class="bui-btn"><i class="icon-chat"></i></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- 正文内容 -->
+        <!-- 输入ui-tab 回车生成 -->
+        <!-- bui-nav 里有多少个li, bui-tab-main里, 就会有多少个li一一对应 -->
+        <div id="uiTabHome" class="bui-tab bui-box-vertical">
+            <div class="bui-tab-head">
+                <ul class="bui-nav">
+                    <!-- 分屏菜单 active 是激活的TAB样式 -->
+                    <li class="bui-btn active">关注</li>
+                    <li class="bui-btn">头条</li>
+                    <li class="bui-btn">抗疫</li>
+                    <li class="bui-btn">视频</li>
+                    <li class="bui-btn">娱乐</li>
+                    <li class="bui-btn">体育</li>
+                </ul>
+            </div>
+            <div class="bui-tab-main">
+                <ul>
+                    <li>
+                        <!-- 输入ui-list 回车生成 -->
+                        <component id="hometab0" name="pages/components/list/index" class="delaylist" type="article" result=""></component>
+                    </li>
+                    <li style="display:none;">
+                        <component id="hometab1" name="pages/components/list/index" class="delaylist" type="article" result="" delay="true"></component>
+                    </li>
+                    <li style="display:none;">
+                        <component id="hometab2" name="pages/components/list/index" class="delaylist" type="article" result="" delay="true"></component>
+                    </li>
+                    <li style="display:none;">
+                        <component id="hometab3" name="pages/components/list/index" class="delaylist" type="video" result="" delay="true"></component>
+                    </li>
+                    <li style="display:none;">
+                        <component id="hometab4" name="pages/components/list/index" class="delaylist" type="article" result="" delay="true"></component>
+                    </li>
+                    <li style="display:none;">
+                        <component id="hometab5" name="pages/components/list/index" class="delaylist" type="article" result="" delay="true"></component>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</div>

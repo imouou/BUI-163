@@ -1,0 +1,28 @@
+{
+  "distServer": {
+    "livereload": true,
+    "port": 9314
+  },
+  "devServer": {
+    "livereload": false,
+    "port": 9312
+  },
+  "qrcode": "/index.html",
+  "ignored": [
+    "!src/README.md",
+    "!src/preview.png"
+  ],
+  "proxy": {
+    "/demo": {
+      "target": "http://www.easybui.com",
+      "changeOrigin": true,
+      "ssl": false
+    }
+  },
+  "cleancss": false,
+  "autoprefixer": true,
+  "uglify": true,
+  "htmlmin": false,
+  "imagemin": false,
+  "license": "MIT"
+}

@@ -1,5 +1,5 @@
 // 这个文件用来存储一些公共的配置及方法
-// 定义常用的方法或变量, 通过这个定义以后, npm run build 打包才不会把变量变成局部.
+// 1.6.2 新增global方法, 定义常用的方法或变量, 通过这个定义以后, npm run build 打包才不会把变量变成局部.
 /* 
 1. 局部调用
 loader.define(function(require,exports,module,global){
