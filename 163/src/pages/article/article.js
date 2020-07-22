@@ -1,10 +1,10 @@
 loader.define(function(require, exports, module) {
 
     var params = bui.history.getParams("url");
+    var uiPage = null;
+
     var pageview = {
         init: function() {
-
-            console.log(params)
 
             // 渲染正文
             pageview.render(params);
@@ -20,6 +20,28 @@ loader.define(function(require, exports, module) {
         },
         bind: function(opt) {
             router.$("#commentNum").text((opt.replyCount || 0) + "人参与跟帖");
+            router.$(".readall").click(function() {
+                if (uiPage) {
+                    uiPage.open();
+                    return;
+                }
+                if (bui.isWebapp) {
+                    // 这个跳转到163的网页以后,不能后退,所以打包使用跳转操作,物理后退
+                    uiPage = bui.page({
+                        url: `https://3g.163.com/news/article/${params.id}.html?clickfrom=index2018_news_newslist#offset=0`,
+                        close: true,
+                        iframe: true
+                    })
+                } else {
+                    bui.load({
+                        url: `https://3g.163.com/news/article/${params.id}.html?clickfrom=index2018_news_newslist#offset=0`,
+                        iframe: true
+                    })
+                }
+
+            })
+
+
         },
         getRelative: function(params) {
 
@@ -52,6 +74,9 @@ loader.define(function(require, exports, module) {
                         <p><img src="${data.imgsrc}"/> </p>
 
                         <p>${data.digest||""} </p>
+                    </section>
+                    <section class="container-y">
+                        <div class="bui-btn danger round readall">查看全文</div>
                     </section>
                     <div class="article-info bui-box">
                         <span class="article-from">${data.tname||""}</span>
