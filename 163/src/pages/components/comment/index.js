@@ -34,7 +34,6 @@ loader.define(function(require, exports, module) {
             var photos = $("#buiPhoto");
             var uiUpload = bui.upload();
 
-
             // 上拉菜单 js 初始化:
             var uiActionsheet = bui.actionsheet({
                 trigger: "#btnUpload",

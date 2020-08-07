@@ -1,52 +1,20 @@
-<style>
-    .container-box {
-        background: #fff;
-    }
-    
-    .page-feedback header .bui-bar {
-        background: #fff;
-    }
-    
-    .page-feedback header .bui-bar .bui-bar-main {
-        color: #333;
-    }
-    
-    .page-feedback .bui-bar .bui-bar-right>[class*=bui-btn]>i,
-    .page-feedback .bui-bar .bui-bar-left>[class*=bui-btn]>i {
-        color: #333;
-    }
-</style>
-
-<div class="bui-page page-feedback bui-box-vertical">
-    <header>
-        <div class="bui-bar">
-            <div class="bui-bar-left">
-            </div>
-            <div class="bui-bar-main">评论</div>
-            <div class="bui-bar-right">
+<ul class="bui-list">
+    <li class="bui-btn clearactive">
+        <div id="feedback" class="bui-input">
+            <textarea placeholder="请填写你的回复,必填(500字以内)" id="" cols="30" rows="5"></textarea>
+        </div>
+    </li>
+</ul>
+<div class="container-box">
+    <!-- 上传的结构 -->
+    <div id="buiPhoto" class="bui-upload bui-fluid-space-4">
+        <div class="span1">
+            <div id="btnUpload" class="bui-btn">
+                <i class="icon-plus large"></i>
             </div>
         </div>
-    </header>
-    <main>
-        <ul class="bui-list">
-            <li class="bui-btn clearactive">
-                <div id="feedback" class="bui-input">
-                    <textarea placeholder="请填写你的回复,必填(500字以内)" id="" cols="30" rows="5"></textarea>
-                </div>
-            </li>
-        </ul>
-        <div class="container-box">
-            <!-- 上传的结构 -->
-            <div id="buiPhoto" class="bui-upload bui-fluid-space-4">
-                <div class="span1">
-                    <div id="btnUpload" class="bui-btn">
-                        <i class="icon-plus large"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-xy">
-            <div id="btnCommentPost" class="bui-btn danger round">提交</div>
-        </div>
-    </main>
+    </div>
+</div>
+<div class="container-xy">
+    <div id="btnCommentPost" class="bui-btn danger round">提交</div>
 </div>
