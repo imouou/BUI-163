@@ -1,4 +1,4 @@
-loader.define(function(require, exports, module) {
+loader.define(function(require, exports, module, global) {
 
     var pageview = {
         init: function() {
@@ -16,7 +16,8 @@ loader.define(function(require, exports, module) {
                     id: "#grouptab" + index
                 });
 
-            }).to(0)
+            }).to(0);
+
         }
     };
 

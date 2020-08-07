@@ -14,12 +14,19 @@ bui.ready(function(){
 
 */
 loader.global(function() {
+
+
     return {
         test: function() {
             console.log("输出test")
         },
-        test2: function() {
-            console.log("输出test2")
+        setStatubarColor: function(id) {
+
+            // 设置全屏的状态栏颜色
+            var headerColor = router.$(`#${id} .bui-bar`).css("background-color");
+            try {
+                plus.navigator.setStatusBarBackground(headerColor || "#e2262a");
+            } catch (e) {}
         }
     }
 })

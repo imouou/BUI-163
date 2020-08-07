@@ -2,7 +2,7 @@
  打包需要设置isWebapp为false 才能绑定后退按键
 ------------------------------------------- */
 
-bui.isWebapp = true;
+bui.isWebapp = false;
 // 原生方法
 bui.on("pageready", function() {
     // 绑定手机后退按键
@@ -48,7 +48,6 @@ function bindBack() {
     } catch (e) {}
 }
 
-
 // 开启单页路由
 window.router = bui.router();
 // 为了确保演示, 这里使用sessionStorage, 关闭浏览器后就能重新进行登录流程处理.
@@ -62,6 +61,11 @@ bui.ready(function() {
         progress: true,
         hash: true,
     })
+
+    // 设置全屏的状态栏颜色
+    try {
+        plus.navigator.setStatusBarBackground("#e2262a");
+    } catch (e) {}
 
     // 绑定事件
     bind();
