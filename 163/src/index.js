@@ -2,7 +2,7 @@
  打包需要设置isWebapp为false 才能绑定后退按键
 ------------------------------------------- */
 
-bui.isWebapp = false;
+bui.isWebapp = true;
 // 原生方法
 bui.on("pageready", function() {
     // 绑定手机后退按键
