@@ -19,7 +19,7 @@
 
 扫码下载体验: 
 
-![163下载地址](package/163ercode.png)
+![163下载地址](https://cdn.jsdelivr.net/gh/imouou/BUI-163/package/163ercode.png)
 
 下载地址: http://d.firim.top/zcdj
 
