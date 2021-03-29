@@ -3,6 +3,17 @@
 ------------------------------------------- */
 
 bui.isWebapp = true;
+
+// bui.config.ajax = {
+//     needNative: true
+// }
+
+// bui.config.list = {
+//     needNative: true
+// }
+// window.loader = bui.loader({
+//         needNative: true
+//     })
 // 原生方法
 bui.on("pageready", function() {
     // 绑定手机后退按键

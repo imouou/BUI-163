@@ -7,11 +7,6 @@ loader.define(function(require,exports,module,global){
     global.test() 
 })
 
-2. 全局调用
-bui.ready(function(){
-    loader.globals.test();
-}) 
-
 */
 loader.global(function() {
 

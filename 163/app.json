@@ -1,11 +1,11 @@
 {
   "distServer": {
     "livereload": true,
-    "port": 9314
+    "port": 5326
   },
   "devServer": {
     "livereload": false,
-    "port": 9312
+    "port": 5324
   },
   "qrcode": "/index.html",
   "ignored": [
@@ -18,6 +18,16 @@
       "changeOrigin": true,
       "ssl": false
     }
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "package": {
+    "uglify": true,
+    "folder": "pages",
+    "main": "pages/main/main"
   },
   "cleancss": false,
   "autoprefixer": true,
